@@ -1,15 +1,7 @@
+import { Homepage } from "./Pages/Homepage/Homepage";
 
-import './App.css'
 function App() {
-
-
-  return (
-    <>
-      <main>
-        <span>Bem vindo ao Desafio Fullstack </span>
-          </main>
-    </>
-  )
+  return <Homepage />;
 }
 
-export default App
+export default App;
