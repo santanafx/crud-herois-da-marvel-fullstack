@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../../Atoms/Button/Button";
-import { Modal } from "../../Atoms/Modal/Modal";
+import { Modal } from "../Modal/Modal";
 import styles from "./Header.module.css";
 
 export const Header = () => {
