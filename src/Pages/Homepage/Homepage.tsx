@@ -1,5 +1,5 @@
-import { Header } from "../../Components/Molecules/Header/Header";
-import { HeroList } from "../../Components/Molecules/HeroList/HeroList";
+import { Header } from "../../Components/Organisms/Header/Header";
+import { HeroList } from "../../Components/Organisms/HeroList/HeroList";
 import { HomepageTemplate } from "../../Components/Template/HomepageTemplate/HomepageTemplate";
 
 //TODO mock data
@@ -41,7 +41,7 @@ export const Homepage = () => {
   return (
     <HomepageTemplate
       header={<Header />}
-      heroList={<HeroList heroes={heroes} />}
+      heroList={<HeroList heroes={heroes} isLoading={false} />}
     />
   );
 };
