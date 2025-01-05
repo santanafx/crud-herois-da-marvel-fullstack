@@ -16,4 +16,5 @@ body {
   --primaryFont: "Anton", serif;
   --secondaryFont: "ABeeZee", serif;
   --disabledColor: #e2e8f0;
+  --errorColor: #e20000;
 }
