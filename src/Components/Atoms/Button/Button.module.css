@@ -1,0 +1,46 @@
+.buttonPrimary {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--secondaryColor);
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  font-family: var(--secondaryFont);
+  cursor: pointer;
+  min-height: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: var(--secondaryColor);
+    color: var(--backGround);
+    border: 1px solid var(--backGround);
+  }
+}
+
+.buttonSecondary {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid var(--secondaryColor);
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-family: var(--secondaryFont);
+  cursor: pointer;
+  min-height: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: var(--primaryColor);
+    color: var(--backGround);
+    border: 1px solid var(--backGround);
+  }
+}
+
+.buttonDisabled {
+  opacity: 0.4;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--disabledColor);
+  background-color: var(--disabledColor);
+  cursor: not-allowed;
+  min-height: 30px;
+}
