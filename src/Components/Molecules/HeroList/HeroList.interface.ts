@@ -1,4 +1,4 @@
-import { HeroItemProps } from "../../Atoms/HeroItem/HeroItem.interface";
+import { HeroItemProps } from "../HeroItem/HeroItem.interface";
 
 export interface HeroListProps {
   heroes: HeroItemProps[];
