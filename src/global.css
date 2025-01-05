@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--backGround);
+}
+
 :root {
-  --backGround: #1c1c1c;
+  --primaryColor: #ffffff;
+  --secondaryColor: #e10024;
+  --menuBackGround: #18212a;
+  --backGround: #010103;
+  --primaryFont: "Anton", serif;
+  --secondaryFont: "ABeeZee", serif;
+  --disabledColor: #e2e8f0;
 }
