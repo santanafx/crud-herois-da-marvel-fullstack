@@ -2,7 +2,7 @@ import { Header } from "../../Components/Organisms/Header/Header";
 import { HeroList } from "../../Components/Organisms/HeroList/HeroList";
 import { HomepageTemplate } from "../../Components/Template/HomepageTemplate/HomepageTemplate";
 
-//TODO mock data
+//TODO remove mock data
 
 const heroes = [
   {
