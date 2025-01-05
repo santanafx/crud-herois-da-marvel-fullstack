@@ -1,0 +1,10 @@
+.heroFormContainer {
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
