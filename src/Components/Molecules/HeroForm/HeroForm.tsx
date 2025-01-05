@@ -32,23 +32,26 @@ export const HeroForm = ({ editData }: HeroFormProps) => {
 
   return (
     <div className={styles.heroFormContainer}>
+      <div className={styles.titleContainer}>
+        {editData ? <h1>Editar herói</h1> : <h1>Criar herói</h1>}
+      </div>
       <Input
         control={control}
         name="name"
-        label="Name"
-        placeholder="placeholder"
+        label="Nome"
+        placeholder="Digite o nome..."
       />
       <Input
         control={control}
         name="abilities"
-        label="Abilities"
-        placeholder="placeholder"
+        label="Habilidades"
+        placeholder="Digite as habilidades..."
       />
       <Input
         control={control}
         name="origin"
-        label="Origin"
-        placeholder="placeholder"
+        label="Origem"
+        placeholder="Digite a origem..."
       />
       <Input
         control={control}
