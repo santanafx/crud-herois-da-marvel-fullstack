@@ -23,7 +23,15 @@
 .imageContainer {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.imageContainer img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .buttonsContainer {
