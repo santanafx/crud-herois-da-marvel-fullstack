@@ -24,7 +24,7 @@ export const Select = ({
   return (
     <>
       {isLoading ? (
-        <Skeleton width="100%" height="40px" />
+        <Skeleton width="100%" height="40px" margin="5px 0" />
       ) : (
         <div className={styles.selectContainer}>
           {label && <label className={styles.selectLabel}>{label}</label>}

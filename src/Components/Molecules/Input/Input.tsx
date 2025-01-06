@@ -13,7 +13,7 @@ export const Input = ({
   return (
     <>
       {isLoading ? (
-        <Skeleton width="100%" height="40px" />
+        <Skeleton width="100%" height="40px" margin="5px 0" />
       ) : (
         <>
           {label && <label>{label}</label>}
