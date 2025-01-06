@@ -17,7 +17,7 @@ export const Header = () => {
       </div>
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)} isOpen={isModalOpen}>
-          <HeroForm />
+          <HeroForm onClose={() => setIsModalOpen(false)} />
         </Modal>
       )}
     </>
