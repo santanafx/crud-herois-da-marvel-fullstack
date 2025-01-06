@@ -1,6 +1,6 @@
 import { HeroItemProps } from "../HeroItem/HeroItem.interface";
 
 export interface HeroListProps {
-  heroes: HeroItemProps[];
+  heroes: { status: number; data: HeroItemProps[] };
   isLoading: boolean;
 }
