@@ -137,7 +137,10 @@ export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
         placeholder="Digite a origem..."
       />
       <div className={styles.buttonsContainer}>
-        <Button isLoading={isLoading} onClick={handleSubmit(handleHeroForm)}>
+        <Button
+          isLoading={isLoading || isMarvelListLoading}
+          onClick={handleSubmit(handleHeroForm)}
+        >
           Salvar
         </Button>
       </div>
