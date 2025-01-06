@@ -20,8 +20,8 @@ export const HeroItem = ({
     <>
       <div className={styles.heroItemContainer}>
         <h1>{name}</h1>
-        <h2>Abilities: {abilities}</h2>
-        <h2>Origin: {origin}</h2>
+        <h2>Habilidades: {abilities}</h2>
+        <h2>Origem: {origin}</h2>
         <div className={styles.imageContainer}>
           <img src={image} alt={name} />
         </div>
