@@ -1,7 +1,8 @@
 export const createHero = async (
   name: string,
   abilities: string,
-  origin: string
+  origin: string,
+  image: string
 ) => {
   try {
     const response = await fetch(
@@ -15,6 +16,7 @@ export const createHero = async (
           name,
           abilities,
           origin,
+          image,
         }),
       }
     );

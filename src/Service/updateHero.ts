@@ -2,7 +2,8 @@ export const updateHero = async (
   id: string,
   name: string,
   abilities: string,
-  origin: string
+  origin: string,
+  image: string
 ) => {
   try {
     const response = await fetch(
@@ -16,6 +17,7 @@ export const updateHero = async (
           name,
           abilities,
           origin,
+          image,
         }),
       }
     );
