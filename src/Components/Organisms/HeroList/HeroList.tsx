@@ -16,13 +16,14 @@ export const HeroList = ({ heroes, isLoading }: HeroListProps) => {
         </div>
       ) : (
         <div className={styles.heroListContainer}>
-          {heroes.map((hero) => (
+          {heroes.data.map((hero) => (
             <HeroItem
               key={crypto.randomUUID()}
               image={hero.image}
               name={hero.name}
               abilities={hero.abilities}
               origin={hero.origin}
+              _id={hero._id}
             />
           ))}
         </div>
