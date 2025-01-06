@@ -3,4 +3,5 @@ export interface HeroItemProps {
   abilities: string;
   origin: string;
   image: string;
+  _id: string;
 }
