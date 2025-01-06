@@ -17,4 +17,5 @@ body {
   --secondaryFont: "ABeeZee", serif;
   --disabledColor: #e2e8f0;
   --errorColor: #e20000;
+  --placeHolderColor: #686868;
 }
