@@ -6,7 +6,13 @@ import { Modal } from "../../Molecules/Modal/Modal";
 import { HeroItemProps } from "./HeroItem.interface";
 import styles from "./HeroItem.module.css";
 
-export const HeroItem = ({ name, abilities, origin, image }: HeroItemProps) => {
+export const HeroItem = ({
+  name,
+  abilities,
+  origin,
+  image,
+  _id,
+}: HeroItemProps) => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -37,7 +43,10 @@ export const HeroItem = ({ name, abilities, origin, image }: HeroItemProps) => {
           onClose={() => setIsEditModalOpen(false)}
           isOpen={isEditModalOpen}
         >
-          <HeroForm editData={{ name, abilities, origin, image }} />
+          <HeroForm
+            editData={{ name, abilities, origin, image, _id }}
+            onClose={() => setIsEditModalOpen(false)}
+          />
         </Modal>
       )}
       {isDeleteModalOpen && (
@@ -45,7 +54,7 @@ export const HeroItem = ({ name, abilities, origin, image }: HeroItemProps) => {
           onClose={() => setIsDeleteModalOpen(false)}
           isOpen={isDeleteModalOpen}
         >
-          <DeleteForm onClose={() => setIsDeleteModalOpen(false)} />
+          <DeleteForm onClose={() => setIsDeleteModalOpen(false)} id={_id} />
         </Modal>
       )}
     </>
