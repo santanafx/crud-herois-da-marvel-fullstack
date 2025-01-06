@@ -16,22 +16,18 @@ export const DeleteForm = ({ onClose, id }: DeleteFormProps) => {
     try {
       const response = await deleteHero(id);
 
-      toast.loading("Deletando herói...");
+      const loadingToast = toast.loading("Deletando herói...");
 
       if (response.status === 201 || response.status === 200) {
         await mutate();
         toast.success("Herói deletado com sucesso!");
         setIsLoading(false);
         onClose();
-        setTimeout(() => {
-          toast.dismiss();
-        }, 2000);
+        toast.dismiss(loadingToast);
       } else {
         setIsLoading(false);
         toast.error("Falha ao deletar herói!");
-        setTimeout(() => {
-          toast.dismiss();
-        }, 2000);
+        toast.dismiss(loadingToast);
       }
     } catch (error) {
       toast.error("Erro ao deletar herói!");
