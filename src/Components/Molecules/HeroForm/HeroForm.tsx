@@ -9,8 +9,8 @@ import { getHeroesList } from "../../../Service/getHeroesList";
 import { getMarvelHeroList } from "../../../Service/getMarvelHeroList";
 import { updateHero } from "../../../Service/updateHero";
 import Button from "../../Atoms/Button/Button";
-import { Input } from "../../Atoms/Input/Input";
-import { Select } from "../../Atoms/Select/Select";
+import { Input } from "../Input/Input";
+import { Select } from "../Select/Select";
 import { HeroFormProps, MarvelHero } from "./HeroForm.interface";
 import styles from "./HeroForm.module.css";
 
@@ -24,7 +24,11 @@ type createHeroSchemaType = z.infer<typeof createHeroSchema>;
 
 export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
   const { mutate } = useSWR("/heroes", getHeroesList);
-  const { data, error } = useSWR("/marvelHeroesList", getMarvelHeroList);
+  const {
+    data,
+    error,
+    isLoading: isMarvelListLoading,
+  } = useSWR("/marvelHeroesList", getMarvelHeroList);
   const [selectedOption, setSelectedOption] = useState<any>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(
     editData?.image || null
@@ -104,6 +108,7 @@ export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
         {editData ? <h1>Editar herói</h1> : <h1>Criar herói</h1>}
       </div>
       <Select
+        isLoading={isMarvelListLoading}
         options={options}
         label="Heróis"
         value={
@@ -118,12 +123,14 @@ export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
         errorMessage={errors.name?.message}
       />
       <Input
+        isLoading={isMarvelListLoading}
         control={control}
         name="abilities"
         label="Habilidades"
         placeholder="Digite as habilidades..."
       />
       <Input
+        isLoading={isMarvelListLoading}
         control={control}
         name="origin"
         label="Origem"
