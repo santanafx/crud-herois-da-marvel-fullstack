@@ -82,7 +82,6 @@ export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
           selectedImage || ""
         );
       }
-
       if (response.status === 201 || response.status === 200) {
         await mutate();
         toast.success("Herói salvo com sucesso!");
