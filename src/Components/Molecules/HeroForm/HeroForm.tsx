@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import useSWR from "swr";
@@ -52,6 +52,12 @@ export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
       origin: editData ? editData.origin : "",
     },
   });
+
+  useEffect(() => {
+    if (editData) {
+      setSelectedOption({ value: editData.name, image: editData.image });
+    }
+  }, [editData]);
 
   const handleHeroForm = async (data: createHeroSchemaType) => {
     setIsLoading(true);
@@ -111,9 +117,7 @@ export const HeroForm = ({ editData, onClose }: HeroFormProps) => {
         isLoading={isMarvelListLoading}
         options={options}
         label="Heróis"
-        value={
-          editData ? editData.name : selectedOption ? selectedOption.value : ""
-        }
+        value={selectedOption ? selectedOption.value : ""}
         placeholder="Selecione um herói..."
         onChange={(selectedOption) => {
           setSelectedOption(selectedOption);
